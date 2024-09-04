@@ -1,11 +1,13 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+
 import Play from '../../assets/imgs/play2.svg'
 import { ReactSVG } from "react-svg"
+
 import { playStation } from "../../store/actions/player.action"
 import { stationService } from "../../services/station.service"
-import { useState } from "react"
 
-export function StationPreview({ station, handleStationClick, context, currentLocation }) {
+export function StationPreview({ station, context, handleStationClick,  currentLocation }) {
 
     const [isHover, setIsHover] = useState(false)
 
@@ -54,7 +56,6 @@ export function StationPreview({ station, handleStationClick, context, currentLo
                 }
                 <div className="station-preview-text">
                     <div className="station-name">{station.name}</div>
-
                 </div>
             </div>
         </Link>
